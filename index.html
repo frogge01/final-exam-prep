@@ -8,14 +8,20 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Load data first (plain JavaScript, no Babel needed) -->
+    <!-- Load data first -->
     <script src="data.js"></script>
 </head>
 <body>
     <div id="root"></div>
     
-    <!-- Load and compile the React component -->
+    <!-- Babel with specific configuration -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" src="app.jsx"></script>
+    <script>
+        // Configure Babel to not try to transform modules
+        Babel.registerPreset('custom-preset', {
+            presets: [[Babel.availablePresets['react'], { modules: false }]]
+        });
+    </script>
+    <script type="text/babel" data-presets="custom-preset" src="app.jsx"></script>
 </body>
 </html>
