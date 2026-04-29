@@ -511,7 +511,7 @@ function FlashCard({ question, answer }) {
   );
 }
 
-export default function LectureStudyDashboard() {
+function LectureStudyDashboard() {
   const [menuOpen, setMenuOpen] = useState(true);
   const [selectedLecture, setSelectedLecture] = useState(2);
   const [selectedContentType, setSelectedContentType] = useState("notes");
