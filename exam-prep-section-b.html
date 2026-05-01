@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BY4048 — Detailed Section B Model Answers</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --surface2: #f4f1eb;
+    --border: #e4ddd0;
+    --text: #1a1714;
+    --muted: #7a7168;
+    --gold: #b8862a;
+    --gold-light: #f5edd8;
+    --blue: #2a5f8f;
+    --blue-light: #ddeaf5;
+    --green: #2a6b4a;
+    --green-light: #d8f0e5;
+    --red: #8f2a2a;
+    --red-light: #f5d8d8;
+    --purple: #5a2a8f;
+    --purple-light: #ebe8f5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .wrapper { max-width: 820px; margin: 0 auto; padding: 60px 28px 120px; }
+
+  /* HEADER */
+  header { margin-bottom: 56px; }
+  .module-tag { display: inline-block; background: var(--gold-light); color: var(--gold); border: 1px solid #d4aa5a; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; margin-bottom: 20px; }
+  header h1 { font-family: 'Lora', serif; font-size: clamp(26px, 4vw, 40px); font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: 12px; }
+  header p { color: var(--muted); font-size: 15px; max-width: 620px; }
+
+  /* ABBREV GLOSSARY */
+  .glossary { background: var(--surface2); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin-bottom: 52px; }
+  .glossary h3 { font-family: 'Lora', serif; font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 14px; letter-spacing: 0.5px; }
+  .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px 24px; }
+  .gloss-item { font-size: 13.5px; }
+  .gloss-item strong { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--blue); }
+
+  /* SCENARIO */
+  .scenario { margin-bottom: 88px; }
+  .scenario-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .scenario-title { font-family: 'Lora', serif; font-size: 24px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+  .priority { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin-bottom: 28px; padding: 4px 12px; border-radius: 3px; }
+  .p-high { background: #fff3d8; color: #8a6000; border: 1px solid #d4aa5a; }
+  .p-med { background: var(--blue-light); color: var(--blue); border: 1px solid #aac8e8; }
+  .p-low { background: var(--green-light); color: var(--green); border: 1px solid #aaddc4; }
+
+  /* SECTION BLOCKS */
+  .section-block { margin-bottom: 24px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+  .section-block-header { padding: 12px 22px; display: flex; align-items: center; gap: 12px; }
+  .sh-h { background: var(--gold-light); border-bottom: 1px solid #d4aa5a; }
+  .sh-r { background: #fff0f5; border-bottom: 1px solid #e8b0c0; }
+  .sh-m { background: var(--blue-light); border-bottom: 1px solid #aac8e8; }
+  .sh-a { background: var(--green-light); border-bottom: 1px solid #aaddc4; }
+  .sh-c { background: var(--purple-light); border-bottom: 1px solid #c0aae8; }
+
+  .section-icon { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+  .si-h { background: var(--gold); }
+  .si-r { background: var(--red); }
+  .si-m { background: var(--blue); }
+  .si-a { background: var(--green); }
+  .si-c { background: var(--purple); }
+
+  .section-title-text { font-family: 'Lora', serif; font-size: 15px; font-weight: 700; }
+  .st-h { color: var(--gold); }
+  .st-r { color: var(--red); }
+  .st-m { color: var(--blue); }
+  .st-a { color: var(--green); }
+  .st-c { color: var(--purple); }
+
+  .section-body { padding: 22px 26px; background: var(--surface); }
+  .section-body p { margin-bottom: 14px; font-size: 15px; line-height: 1.85; }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  .hypothesis-box { background: var(--gold-light); border: 1px solid #d4aa5a; border-radius: 4px; padding: 16px 20px; margin-bottom: 16px; }
+  .hypothesis-box p { font-family: 'Lora', serif; font-style: italic; font-size: 15.5px; color: var(--text); margin-bottom: 0; }
+
+  .step-list { list-style: none; counter-reset: s; }
+  .step-list li { counter-increment: s; display: flex; gap: 14px; margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .step-list li::before { content: counter(s); font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: white; background: var(--blue); min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+
+  .step-head { font-weight: 600; color: var(--blue); }
+
+  .result-list { list-style: none; }
+  .result-list li { display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; align-items: flex-start; }
+  .result-list li::before { content: "→"; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+  .controls-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .control-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; padding: 12px 16px; }
+  .control-type { font-family: 'DM Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 4px; }
+  .control-desc { font-size: 14px; }
+
+  .term { background: var(--blue-light); color: var(--blue); font-family: 'DM Mono', monospace; font-size: 12px; padding: 1px 6px; border-radius: 2px; font-style: normal; }
+  .key { font-weight: 600; color: var(--text); }
+
+  hr { border: none; border-top: 2px solid var(--border); margin: 72px 0; }
+
+  .exam-note { background: #fff8e8; border: 1px solid #e8c86a; border-left: 4px solid var(--gold); border-radius: 4px; padding: 16px 20px; margin-top: 20px; }
+  .exam-note p { font-size: 14px; color: #6a5010; margin-bottom: 0; }
+
+  @media(max-width:600px) {
+    .controls-grid { grid-template-columns: 1fr; }
+    .glossary-grid { grid-template-columns: 1fr; }
+  }
+
+  /* TOOLTIP STYLES — underline only; popup is injected into body by JS */
+  abbr.tt {
+    text-decoration: none;
+    border-bottom: 1.5px dotted var(--blue);
+    color: var(--blue);
+    cursor: pointer;
+    font-style: normal;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  /* The floating tooltip div created by JS */
+  #tt-popup {
+    position: fixed;
+    z-index: 999999;
+    background: #1a1714;
+    color: #f0ece4;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 10px 14px;
+    border-radius: 6px;
+    max-width: 310px;
+    white-space: normal;
+    text-align: left;
+    pointer-events: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  #tt-popup.visible { opacity: 1; }
+
+  /* little arrow pointing DOWN toward the hovered word */
+  #tt-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1a1714;
+  }
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="module-tag">BY4048 · Section B · Detailed Model Answers</div>
+    <h1>Hypothesis, Rationale, Methodology<br>&amp; Expected Results — Plain English</h1>
+    <p>All abbreviations explained. Three full scenarios written out as you would in the exam, with plain-language commentary alongside each section.</p>
+  </header>
+
+  <!-- GLOSSARY -->
+  <div class="glossary">
+    <h3>📖 Abbreviation Glossary — Everything You Need</h3>
+    <div class="glossary-grid">
+      <div class="gloss-item"><strong>CRLS1</strong> — Cardiolipin Synthase 1 (the enzyme that makes cardiolipin)</div>
+      <div class="gloss-item"><strong>OGD</strong> — Oxygen-Glucose Deprivation (lab model of a stroke/ischaemia)</div>
+      <div class="gloss-item"><strong>ΔΨm</strong> — Mitochondrial Membrane Potential (the electrical charge across the inner mitochondrial membrane; essential for making ATP)</div>
+      <div class="gloss-item"><strong>ROS</strong> — Reactive Oxygen Species (toxic molecules produced when mitochondria are damaged, like hydrogen peroxide H₂O₂)</div>
+      <div class="gloss-item"><strong>ATP</strong> — Adenosine Triphosphate (the cell's energy currency, made in mitochondria)</div>
+      <div class="gloss-item"><strong>ETC</strong> — Electron Transport Chain (protein complexes in the inner mitochondrial membrane that make ATP)</div>
+      <div class="gloss-item"><strong>IMM</strong> — Inner Mitochondrial Membrane</div>
+      <div class="gloss-item"><strong>OMM</strong> — Outer Mitochondrial Membrane</div>
+      <div class="gloss-item"><strong>Cyt c</strong> — Cytochrome c (a small protein that carries electrons in healthy mitochondria; when released into the cell, it triggers cell death)</div>
+      <div class="gloss-item"><strong>MOMP</strong> — Mitochondrial Outer Membrane Permeabilisation (when pores form in the outer membrane, releasing death signals)</div>
+      <div class="gloss-item"><strong>SH-SY5Y</strong> — A human neuroblastoma cell line, used as a lab model of neurons</div>
+      <div class="gloss-item"><strong>PC12</strong> — A rat cell line that behaves like dopamine-producing neurons, used for Parkinson's models</div>
+      <div class="gloss-item"><strong>WB</strong> — Western Blot (lab technique to detect and measure a specific protein)</div>
+      <div class="gloss-item"><strong>IF</strong> — Immunofluorescence (microscopy technique using fluorescent antibodies to see where a protein is located in the cell)</div>
+      <div class="gloss-item"><strong>qRT-PCR</strong> — Quantitative Real-Time PCR (measures how much of a gene's messenger RNA is present, i.e. how active the gene is)</div>
+      <div class="gloss-item"><strong>siRNA</strong> — Small Interfering RNA (a tool to specifically switch off one gene in a cell)</div>
+      <div class="gloss-item"><strong>JC-1</strong> — A fluorescent dye that changes colour depending on ΔΨm. Healthy mitochondria = red; damaged/depolarised mitochondria = green</div>
+      <div class="gloss-item"><strong>NAO</strong> — Nonyl Acridine Orange (a fluorescent dye that specifically sticks to cardiolipin, used to measure its amount)</div>
+      <div class="gloss-item"><strong>Annexin V / PI</strong> — A flow cytometry assay to detect cells undergoing apoptosis (Annexin V marks early apoptosis; Propidium Iodide marks dead cells)</div>
+      <div class="gloss-item"><strong>PINK1</strong> — A protein kinase (enzyme) that sits in mitochondria and acts as a damage sensor. Full name: PTEN-Induced Kinase 1</div>
+      <div class="gloss-item"><strong>Parkin</strong> — An E3 ubiquitin ligase enzyme recruited by PINK1 to tag damaged mitochondria for disposal</div>
+      <div class="gloss-item"><strong>LC3-II</strong> — A protein marker of autophagosomes (the "bags" that capture and dispose of damaged mitochondria). More LC3-II = more mitophagy happening</div>
+      <div class="gloss-item"><strong>p62</strong> — A protein that links damaged cargo to autophagosomes. When mitophagy is active, p62 gets broken down (its levels drop)</div>
+      <div class="gloss-item"><strong>MitoSOX</strong> — A fluorescent dye that specifically detects ROS inside mitochondria</div>
+      <div class="gloss-item"><strong>Rotenone</strong> — A pesticide that blocks Complex I of the ETC, causing ΔΨm collapse. Used to model Parkinson's disease in the lab</div>
+      <div class="gloss-item"><strong>CCCP</strong> — A chemical that collapses ΔΨm entirely, used as a positive control to confirm assays work</div>
+      <div class="gloss-item"><strong>MAMs</strong> — Mitochondria-Associated Membranes (specialised contact points where the ER and mitochondria communicate, only 10–30 nm apart)</div>
+      <div class="gloss-item"><strong>MFN2</strong> — Mitofusin 2 (a protein on the outer mitochondrial membrane that helps mitochondria fuse together AND helps anchor MAMs)</div>
+      <div class="gloss-item"><strong>PACS2</strong> — A protein that regulates the shape and contacts of MAMs</div>
+      <div class="gloss-item"><strong>GRP78</strong> — A chaperone protein in the ER that is upregulated during ER stress (a marker that the ER is under pressure)</div>
+      <div class="gloss-item"><strong>XBP1</strong> — A transcription factor activated during ER stress as part of the Unfolded Protein Response (UPR)</div>
+      <div class="gloss-item"><strong>UPR</strong> — Unfolded Protein Response (the ER's emergency response to misfolded proteins; can become harmful if prolonged)</div>
+      <div class="gloss-item"><strong>AD / IAD</strong> — Alzheimer's Disease</div>
+      <div class="gloss-item"><strong>PD</strong> — Parkinson's Disease</div>
+      <div class="gloss-item"><strong>tBID / BAX / BAK</strong> — Pro-apoptotic proteins that punch holes in the outer mitochondrial membrane to release cytochrome c</div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SCENARIO 1 -->
+  <!-- ============================================================ -->
+  <section class="scenario" id="s1">
+    <div class="scenario-label">Scenario 01 · Most likely exam question</div>
+    <div class="scenario-title"><abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr>, <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr>, Ceramide and Mitochondrial Membrane Potential<br>→ Stress-Induced Neuronal Apoptosis</div>
+    <div class="priority p-high">🔴 Highest Priority — Friend 1's clue maps directly to this</div>
+
+    <!-- HYPOTHESIS -->
+    <div class="section-block">
+      <div class="section-block-header sh-h">
+        <div class="section-icon si-h">💡</div>
+        <div class="section-title-text st-h">Section 1 — Hypothesis</div>
+      </div>
+      <div class="section-body">
+        <div class="hypothesis-box">
+          <p>We hypothesise that oxygen-glucose deprivation (<abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr>) causes downregulation of the enzyme <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> in neuronal cells, leading to a reduction in cardiolipin levels. This loss of cardiolipin, combined with accumulation of the lipid ceramide, results in collapse of the mitochondrial membrane potential (<abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>) and triggers cytochrome c-dependent apoptosis (programmed cell death).</p>
+        </div>
+        <p style="font-size:14px;color:var(--muted);font-style:italic;">→ In plain English: When neurons are starved of oxygen and glucose (as happens in a stroke), the enzyme that makes cardiolipin gets turned down. With less cardiolipin, the inner mitochondrial membrane destabilises, the voltage across it collapses, and the cell starts killing itself.</p>
+      </div>
+    </div>
+
+    <!-- RATIONALE -->
+    <div class="section-block">
+      <div class="section-block-header sh-r">
+        <div class="section-icon si-r">📚</div>
+        <div class="section-title-text st-r">Section 2 — Rationale (Why we expect this to happen)</div>
+      </div>
+      <div class="section-body">
+        <p><span class="key">What is cardiolipin and why does it matter?</span><br>
+        Cardiolipin is a special phospholipid (a type of fat molecule) found <em>exclusively</em> in the inner mitochondrial membrane. It plays four critical roles: (1) it holds the energy-producing protein complexes of the Electron Transport Chain (<abbr class="tt" data-tip="Electron Transport Chain — protein complexes in the inner membrane that generate ATP">ETC</abbr>) together; (2) it maintains the folded structures (called "cristae") that give the inner membrane its large surface area; (3) it physically grips cytochrome c — a small protein — keeping it inside the mitochondria, which <em>prevents</em> the cell from dying; and (4) it is required for importing proteins into mitochondria. <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> (Cardiolipin Synthase 1) is the enzyme that builds cardiolipin inside the inner membrane.</p>
+
+        <p><span class="key">What does <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> do?</span><br>
+        <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> (Oxygen-Glucose Deprivation) mimics what happens to brain cells during a stroke. Removing both oxygen and glucose starves the cell of energy. This causes: a spike in toxic reactive oxygen species (<abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr>) — essentially chemical "rust" — which damage cellular components including lipids; a drop in <abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr> (energy); and disruption of normal lipid metabolism. The result is that <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> expression decreases, meaning less cardiolipin is made.</p>
+
+        <p><span class="key">What does ceramide do?</span><br>
+        Ceramide is a sphingolipid (another type of membrane fat) that accumulates during cellular stress. It is pro-apoptotic — it promotes cell death. Ceramide disrupts membrane integrity, which accelerates the collapse of <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>. Together with cardiolipin loss, it creates a two-hit attack on the mitochondrial membrane.</p>
+
+        <p><span class="key">How does this lead to cell death?</span><br>
+        When cardiolipin is lost or oxidised by excess <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr>, cytochrome c detaches from the inner membrane, moves to the outer membrane, and is released into the cell's cytoplasm. In the cytoplasm, cytochrome c activates a "death machine" called the apoptosome, which activates caspases (enzymes that dismantle the cell from within). This is the intrinsic apoptosis pathway, and cardiolipin oxidation is the required trigger for it.</p>
+      </div>
+    </div>
+
+    <!-- METHODOLOGY -->
+    <div class="section-block">
+      <div class="section-block-header sh-m">
+        <div class="section-icon si-m">🔬</div>
+        <div class="section-title-text st-m">Section 3 — Methodology (Step-by-step experimental plan)</div>
+      </div>
+      <div class="section-body">
+        <p><span class="key">Cell model: <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells</span> — these are human neuroblastoma cells (derived from a nerve tumour) that are widely used as a laboratory model of neurons. They are relevant to Alzheimer's and stroke research.</p>
+
+        <ol class="step-list">
+          <li>
+            <div><span class="step-head">Induce <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> stress.</span> Grow <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells normally, then switch them to a glucose-free growth medium and place them in a sealed chamber with only 1% oxygen (instead of the normal 21%) for 6 hours. This mimics the conditions of a stroke. After 6 hours, restore normal conditions (called "reoxygenation") for 24 hours to model what happens when blood flow returns.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Measure <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> at the protein and gene level.</span> Use Western Blot (<abbr class="tt" data-tip="Western Blot — proteins are separated by size on a gel and detected with specific antibodies to measure their amount">WB</abbr>) — a technique where you run proteins through a gel, transfer them to a membrane, and use a specific antibody to detect and measure the amount of <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> protein. Also use <abbr class="tt" data-tip="Quantitative Real-Time PCR — measures how much messenger RNA a gene produces, showing how active the gene is">qRT-PCR</abbr> to measure the amount of <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> messenger RNA (mRNA), which tells you whether the gene itself is being turned down or whether the protein is being degraded after it's made.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Measure cardiolipin levels.</span> Use a fluorescent dye called <abbr class="tt" data-tip="Nonyl Acridine Orange — fluorescent dye that binds specifically to cardiolipin; measures its levels in cells">NAO</abbr> (Nonyl Acridine Orange), which specifically binds to cardiolipin. Cells are stained with <abbr class="tt" data-tip="Nonyl Acridine Orange — fluorescent dye that binds specifically to cardiolipin; measures its levels in cells">NAO</abbr> and analysed by flow cytometry (a machine that measures fluorescence from thousands of cells quickly) or fluorescence microscopy. Less fluorescence = less cardiolipin.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Measure mitochondrial membrane potential (<abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>).</span> Use the <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> dye assay. <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> is a dye that fluoresces red in healthy, charged mitochondria (it forms "aggregates") and fluoresces green when the membrane potential has collapsed (it becomes a "monomer"). Calculate the red-to-green fluorescence ratio — a falling ratio means the mitochondria are losing their charge and failing.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Measure ceramide accumulation.</span> Use mass spectrometry-based lipidomics (a method that can identify and quantify all lipid species in a sample) to detect and measure ceramide levels. Confirm its location in the cell using immunofluorescence microscopy with an anti-ceramide antibody.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Confirm cell death (apoptosis).</span> First, separate the cytoplasmic fraction (liquid inside the cell but outside mitochondria) from the mitochondrial fraction and use Western Blot to detect cytochrome c — if it appears in the cytoplasm, it has been released, meaning apoptosis has been triggered. Second, measure caspase-3 and caspase-9 enzymatic activity (these are the "executioner" enzymes of apoptosis; elevated activity confirms apoptosis is happening). Third, use Annexin V / Propidium Iodide (PI) staining analysed by flow cytometry — Annexin V sticks to a molecule that flips to the cell surface early in apoptosis, and PI stains dead cells.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Rescue experiment (the most important step — proves causality).</span> Use a lentiviral vector (a modified virus used as a gene delivery tool) to re-introduce a working copy of the <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> gene into OGD-treated cells that have had their <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> knocked down. If restoring <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> → cardiolipin levels recover → <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> is maintained → cytochrome c is NOT released → apoptosis is reduced, then this <em>proves</em> that <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> loss was the cause, not a coincidence.</div>
+          </li>
+        </ol>
+
+        <p><span class="key">Controls (essential — always include these explicitly in the exam):</span></p>
+        <div class="controls-grid">
+          <div class="control-card"><div class="control-type">Negative control</div><div class="control-desc"><abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells grown in normal oxygen and normal glucose medium — this is the healthy baseline to compare everything against</div></div>
+          <div class="control-card"><div class="control-type"><abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> scramble control</div><div class="control-desc">When knocking down <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> with <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr>, also treat cells with a "scramble" <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> — a random sequence that doesn't target any gene. This ensures any effects you see are specifically due to <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> loss, not the <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> process itself</div></div>
+          <div class="control-card"><div class="control-type">Positive control for <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr></div><div class="control-desc">Treat cells with <abbr class="tt" data-tip="Carbonyl cyanide m-chlorophenyl hydrazone — collapses mitochondrial membrane potential fully; used as a positive control">CCCP</abbr> — a chemical that completely collapses <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>. This confirms your <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> assay is working and can detect membrane potential loss</div></div>
+          <div class="control-card"><div class="control-type">Vector-only rescue control</div><div class="control-desc">In the rescue experiment, transfect cells with the empty lentiviral vector (no <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> gene inside it). This ensures any recovery you see is due to <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr>, not the vector itself</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPECTED RESULTS -->
+    <div class="section-block">
+      <div class="section-block-header sh-a">
+        <div class="section-icon si-a">📊</div>
+        <div class="section-title-text st-a">Section 4 — Analysis &amp; Expected Results</div>
+      </div>
+      <div class="section-body">
+        <p>If our hypothesis is correct, we would expect the following chain of results:</p>
+        <ul class="result-list">
+          <li><abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> cells show <strong>significantly lower <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> protein and mRNA levels</strong> compared to control cells (confirmed by <abbr class="tt" data-tip="Western Blot — proteins are separated by size on a gel and detected with specific antibodies to measure their amount">WB</abbr> and <abbr class="tt" data-tip="Quantitative Real-Time PCR — measures how much messenger RNA a gene produces, showing how active the gene is">qRT-PCR</abbr>)</li>
+          <li><abbr class="tt" data-tip="Nonyl Acridine Orange — fluorescent dye that binds specifically to cardiolipin; measures its levels in cells">NAO</abbr> fluorescence is <strong>significantly reduced</strong> in <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> cells, confirming cardiolipin depletion</li>
+          <li><abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> red-to-green ratio is <strong>significantly lower</strong> in <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> cells, confirming <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapse</li>
+          <li>Mass spectrometry shows <strong>ceramide levels are elevated</strong> in <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> cells, correlating with the timing of <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapse</li>
+          <li>Cytochrome c is detected in the <strong>cytoplasmic fraction</strong> (not just the mitochondrial fraction) by <abbr class="tt" data-tip="Western Blot — proteins are separated by size on a gel and detected with specific antibodies to measure their amount">WB</abbr>, confirming release. Caspase-3/9 activity is elevated. Annexin V staining shows increased apoptotic cell percentage</li>
+          <li><strong>Rescue experiment:</strong> <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> re-expression restores <abbr class="tt" data-tip="Nonyl Acridine Orange — fluorescent dye that binds specifically to cardiolipin; measures its levels in cells">NAO</abbr> fluorescence and <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> red ratio, reduces ceramide levels, prevents cytochrome c release, and significantly reduces caspase activity and Annexin V+ cell percentage — <em>directly linking <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> loss to the apoptotic cascade</em></li>
+        </ul>
+        <p style="margin-top:14px;"><span class="key">Conclusion supported:</span> <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> → ↓<abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> → ↓cardiolipin + ↑ceramide → <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapse → cytochrome c release → caspase activation → neuronal apoptosis. <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> is a potential therapeutic target for neuroprotection in ischaemic injury.</p>
+      </div>
+    </div>
+
+    <div class="exam-note">
+      <p>⚡ <strong>Exam tip:</strong> Friend 1's note literally says "In an experiment: <abbr class="tt" data-tip="Oxygen-Glucose Deprivation — lab model of a stroke; cells are starved of oxygen and glucose">OGD</abbr> induces metabolic stress → ↓<abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr>, <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> → <abbr class="tt" data-tip="Cardiolipin Synthase 1 — the enzyme that makes cardiolipin in the inner mitochondrial membrane">CRLS1</abbr> dysfunction → reduced cardiolipin → ΨΔm drops → ceramide accumulates → mitochondrial apoptosis." George essentially described this answer in his lecture clue. Write it confidently and mechanistically.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ============================================================ -->
+  <!-- SCENARIO 2 -->
+  <!-- ============================================================ -->
+  <section class="scenario" id="s2">
+    <div class="scenario-label">Scenario 02 · High priority</div>
+    <div class="scenario-title"><abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>, <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> and <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr><br>→ Mitophagy Failure in Neurodegeneration (Parkinson's Disease)</div>
+    <div class="priority p-med">🔴 High Priority — Clue C9 maps directly to this</div>
+
+    <!-- HYPOTHESIS -->
+    <div class="section-block">
+      <div class="section-block-header sh-h">
+        <div class="section-icon si-h">💡</div>
+        <div class="section-title-text st-h">Section 1 — Hypothesis</div>
+      </div>
+      <div class="section-body">
+        <div class="hypothesis-box">
+          <p>We hypothesise that collapse of the mitochondrial membrane potential (<abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>) prevents <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> from being imported into mitochondria, causing it to accumulate on the outer membrane and recruit the enzyme <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr>, which then marks damaged mitochondria for disposal (mitophagy). When <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> or <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> are lost or mutated — as in Parkinson's disease — this quality-control system fails, damaged mitochondria accumulate, and neurons progressively die.</p>
+        </div>
+        <p style="font-size:14px;color:var(--muted);font-style:italic;">→ In plain English: Healthy mitochondria destroy the <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> protein to show they're fine. Damaged mitochondria can't destroy it, so <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> builds up and sets off an alarm that causes the damaged mitochondria to be recycled. In Parkinson's, this alarm system is broken.</p>
+      </div>
+    </div>
+
+    <!-- RATIONALE -->
+    <div class="section-block">
+      <div class="section-block-header sh-r">
+        <div class="section-icon si-r">📚</div>
+        <div class="section-title-text st-r">Section 2 — Rationale</div>
+      </div>
+      <div class="section-body">
+        <p><span class="key">How <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> works normally:</span><br>
+        <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> is a protein kinase (an enzyme that can switch other proteins on/off by adding a phosphate group). It is made in the cytoplasm and has a targeting signal that tells it to go to mitochondria. In a healthy mitochondrion with a strong <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>, <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> is imported through channel proteins called <abbr class="tt" data-tip="Translocase of the Outer Membrane — protein channel that imports proteins into mitochondria across the outer membrane">TOM</abbr> and <abbr class="tt" data-tip="Translocase of the Inner Membrane — protein channel that imports proteins across the inner mitochondrial membrane">TIM</abbr> complexes. Once inside, it is cut up by two enzymes (<abbr class="tt" data-tip="Mitochondrial Processing Peptidase — cleaves the targeting signal from imported proteins inside mitochondria">MPP</abbr> first, then <abbr class="tt" data-tip="Presenilin-Associated Rhomboid-Like protease — cleaves PINK1 in healthy mitochondria, leading to its proteasomal degradation">PARL</abbr>) and the resulting fragment is exported and destroyed by the cell's waste-disposal machine (the proteasome). So in healthy cells: <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> is constantly made and constantly destroyed. Its absence at the outer membrane signals "I'm healthy."</p>
+
+        <p><span class="key">What happens when mitochondria are damaged:</span><br>
+        When <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapses (because of damage, toxins, or disease), <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> can no longer be pulled into the mitochondria — the import process requires the electrical charge to work. Instead, <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> gets stuck on the outer mitochondrial membrane. It activates itself (autophosphorylation) and starts tagging proteins on the outer membrane with phosphate groups, specifically a protein called ubiquitin. These "phospho-ubiquitin" tags act like flags that recruit <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> from the cell's cytoplasm. <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> is then activated by <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> and starts adding more ubiquitin tags (ubiquitination) to outer membrane proteins like MFN1, <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>, and <abbr class="tt" data-tip="Voltage-Dependent Anion Channel — outer membrane channel; part of the MAM calcium transfer complex with IP3R and GRP75">VDAC</abbr>. This creates a "eat me" signal. Autophagy receptor proteins (<abbr class="tt" data-tip="Links ubiquitinated cargo to autophagosomes; p62 levels drop when mitophagy is active because it gets degraded too">p62</abbr>, OPTN, NDP52) recognise these tags and connect the damaged mitochondrion to the autophagosome — essentially a bag that engulfs the damaged mitochondrion and delivers it to the lysosome for digestion. This entire process is called mitophagy.</p>
+
+        <p><span class="key">Why this matters in Parkinson's disease:</span><br>
+        Mutations in <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> (PARK6 gene) and <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> (PARK2 gene) are the most common causes of inherited, early-onset Parkinson's disease. Without working <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> or <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr>, damaged mitochondria cannot be cleared. They accumulate, produce excessive <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr>, fail to make enough <abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr>, and eventually trigger neuronal death — particularly in dopamine-producing neurons of the brainstem, whose death causes the movement symptoms of Parkinson's.</p>
+      </div>
+    </div>
+
+    <!-- METHODOLOGY -->
+    <div class="section-block">
+      <div class="section-block-header sh-m">
+        <div class="section-icon si-m">🔬</div>
+        <div class="section-title-text st-m">Section 3 — Methodology</div>
+      </div>
+      <div class="section-body">
+        <p><span class="key">Cell model: <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells + <abbr class="tt" data-tip="Pesticide that blocks Complex I of the electron transport chain, collapsing membrane potential; standard Parkinson&#x27;s model">Rotenone</abbr> treatment.</span> <abbr class="tt" data-tip="Pesticide that blocks Complex I of the electron transport chain, collapsing membrane potential; standard Parkinson&#x27;s model">Rotenone</abbr> is a pesticide that blocks Complex I of the Electron Transport Chain. This stops electron flow, collapses <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr>, and causes a surge of <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr>. It's the standard lab model for Parkinson's disease, because it damages mitochondria in the same way that the disease does.</p>
+
+        <ol class="step-list">
+          <li>
+            <div><span class="step-head">Induce mitochondrial damage with rotenone.</span> Treat <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells with 5–10 µM rotenone for 24 hours. This collapses <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> and mimics mitochondrial damage seen in Parkinson's disease. Confirm <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapse immediately using the <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> dye assay (shift from red to green fluorescence).</div>
+          </li>
+          <li>
+            <div><span class="step-head">Detect <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> stabilisation on the outer membrane.</span> In rotenone-treated cells, <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> should accumulate (the full-length 63 kDa form of the protein). Use Western Blot — the full-length <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> band should be much stronger in treated cells. Perform mitochondrial fractionation (separate mitochondria from the rest of the cell by centrifugation) and run Western Blot on each fraction — <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> should appear specifically in the mitochondrial fraction. Confirm location by immunofluorescence microscopy, looking for <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> co-localising (appearing in the same spot) with TOM20, a known outer membrane protein.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Confirm <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> recruitment and activation.</span> Use co-immunoprecipitation (<abbr class="tt" data-tip="Co-Immunoprecipitation — detects protein interactions by pulling down one protein with an antibody and checking if another binds to it">co-IP</abbr>) — a technique where you pull down one protein (<abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>) with an antibody, and check whether <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> is stuck to it. This confirms the two proteins physically interact. Use an antibody specific for phosphorylated <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> (at the amino acid Serine 65) — this specific phosphorylation event is what activates <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr>. Visualise <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> moving from a diffuse cytoplasmic distribution to concentrated spots on mitochondria using immunofluorescence.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Confirm that mitophagy is happening.</span> Use four readouts together: (a) Western Blot for <abbr class="tt" data-tip="Autophagosome membrane marker — elevated LC3-II means active mitophagy; mitochondria are being engulfed and digested">LC3-II</abbr> — <abbr class="tt" data-tip="Autophagosome membrane marker — elevated LC3-II means active mitophagy; mitochondria are being engulfed and digested">LC3-II</abbr> is a protein that gets incorporated into the autophagosome membrane. More <abbr class="tt" data-tip="Autophagosome membrane marker — elevated LC3-II means active mitophagy; mitochondria are being engulfed and digested">LC3-II</abbr> = more autophagosomes = more active mitophagy. (b) Check that <abbr class="tt" data-tip="Links ubiquitinated cargo to autophagosomes; p62 levels drop when mitophagy is active because it gets degraded too">p62</abbr> levels decrease over time — <abbr class="tt" data-tip="Links ubiquitinated cargo to autophagosomes; p62 levels drop when mitophagy is active because it gets degraded too">p62</abbr> is the protein that links ubiquitinated mitochondria to the autophagosome; when mitophagy is active, <abbr class="tt" data-tip="Links ubiquitinated cargo to autophagosomes; p62 levels drop when mitophagy is active because it gets degraded too">p62</abbr> itself gets destroyed too. (c) Measure total mitochondrial DNA (<abbr class="tt" data-tip="Mitochondrial DNA — the genome inside mitochondria; copy number measured by PCR reflects how many mitochondria are present">mtDNA</abbr>) by quantitative PCR — less <abbr class="tt" data-tip="Mitochondrial DNA — the genome inside mitochondria; copy number measured by PCR reflects how many mitochondria are present">mtDNA</abbr> means mitochondria are being degraded. (d) Use MitoTracker (a fluorescent dye that stains mitochondria) and measure total fluorescence by flow cytometry — a decrease means mitochondria are being destroyed.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Loss-of-function experiment (the key test).</span> Use <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> to knock down <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> or <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> individually in rotenone-treated cells. If the hypothesis is correct, knocking down either protein should block mitophagy — confirmed by <abbr class="tt" data-tip="Autophagosome membrane marker — elevated LC3-II means active mitophagy; mitochondria are being engulfed and digested">LC3-II</abbr> NOT increasing, <abbr class="tt" data-tip="Links ubiquitinated cargo to autophagosomes; p62 levels drop when mitophagy is active because it gets degraded too">p62</abbr> NOT decreasing, and <abbr class="tt" data-tip="Mitochondrial DNA — the genome inside mitochondria; copy number measured by PCR reflects how many mitochondria are present">mtDNA</abbr> remaining elevated. Additionally, these cells should show MORE damage: higher <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr> (detected with <abbr class="tt" data-tip="Fluorescent dye that specifically detects reactive oxygen species inside mitochondria">MitoSOX</abbr>, a fluorescent dye specific for mitochondrial <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr>), higher caspase-3 activity, more Annexin V-positive (dying) cells.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Rescue experiment.</span> Re-introduce wild-type (normal, working) <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> or <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> by plasmid transfection into cells where endogenous <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> has been knocked down. Prediction: restored <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> → mitophagy resumes → damaged mitochondria cleared → <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr> decreases → cell death decreases.</div>
+          </li>
+        </ol>
+
+        <div class="controls-grid">
+          <div class="control-card"><div class="control-type">Negative control</div><div class="control-desc">DMSO-treated <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells (DMSO is the solvent for rotenone; gives baseline with no rotenone damage)</div></div>
+          <div class="control-card"><div class="control-type">Positive control for <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> assay</div><div class="control-desc"><abbr class="tt" data-tip="Carbonyl cyanide m-chlorophenyl hydrazone — collapses mitochondrial membrane potential fully; used as a positive control">CCCP</abbr> treatment — collapses <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> completely, confirms <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> assay is working and sensitive</div></div>
+          <div class="control-card"><div class="control-type"><abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> scramble control</div><div class="control-desc">Cells treated with a scramble <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> sequence that targets nothing — ensures effects are <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> specific</div></div>
+          <div class="control-card"><div class="control-type">Rescue vector control</div><div class="control-desc">Empty plasmid vector (no <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> gene inside) — confirms rescue effects are gene-specific</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPECTED RESULTS -->
+    <div class="section-block">
+      <div class="section-block-header sh-a">
+        <div class="section-icon si-a">📊</div>
+        <div class="section-title-text st-a">Section 4 — Analysis &amp; Expected Results</div>
+      </div>
+      <div class="section-body">
+        <ul class="result-list">
+          <li><abbr class="tt" data-tip="Pesticide that blocks Complex I of the electron transport chain, collapsing membrane potential; standard Parkinson&#x27;s model">Rotenone</abbr> treatment causes a significant drop in <abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> red:green ratio, confirming <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapse</li>
+          <li>Western Blot shows a <strong>strong full-length <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> (63 kDa) band</strong> in rotenone-treated cells vs. absent/faint in controls, confirming <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> stabilisation when <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> is lost</li>
+          <li><abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> phospho-Ser65 is detected only in rotenone-treated cells; immunofluorescence shows <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> moving from cytoplasm to mitochondrial puncta (spots)</li>
+          <li><abbr class="tt" data-tip="Autophagosome membrane marker — elevated LC3-II means active mitophagy; mitochondria are being engulfed and digested">LC3-II</abbr> levels increase and <abbr class="tt" data-tip="Links ubiquitinated cargo to autophagosomes; p62 levels drop when mitophagy is active because it gets degraded too">p62</abbr> decreases in rotenone-treated cells, confirming active mitophagy. MitoTracker intensity decreases, confirming mitochondrial mass loss through degradation</li>
+          <li><abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> knockdown <strong>blocks these responses</strong>: <abbr class="tt" data-tip="Autophagosome membrane marker — elevated LC3-II means active mitophagy; mitochondria are being engulfed and digested">LC3-II</abbr> does NOT increase, mitochondria are NOT cleared, <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr> (<abbr class="tt" data-tip="Fluorescent dye that specifically detects reactive oxygen species inside mitochondria">MitoSOX</abbr>) is higher, more cells die (Annexin V+)</li>
+          <li>Rescue with wild-type <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> restores mitophagy markers and reduces cell death, confirming causality</li>
+        </ul>
+        <p style="margin-top:14px;"><span class="key">Conclusion:</span> <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> loss is both necessary and sufficient to stabilise <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> and initiate Parkin-dependent mitophagy. Loss of either protein (as in Parkinson's disease mutations) blocks mitochondrial quality control, causing accumulation of damaged mitochondria and neurodegeneration.</p>
+      </div>
+    </div>
+
+    <div class="exam-note">
+      <p>⚡ <strong>Exam tip:</strong> Clue C9 says <em>"<abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> not internalised in disease state → auto/mitophagy (<abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> dependent)"</em> — this is exactly the mechanism. Clue C11 adds that <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells + rotenone = <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> and <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> induction. Both clues point to this scenario. Also note: Clue C8 says overexpressed p53 represses <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> transcription — you could mention this as an additional angle if the question includes "p53".</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ============================================================ -->
+  <!-- SCENARIO 3 -->
+  <!-- ============================================================ -->
+  <section class="scenario" id="s3">
+    <div class="scenario-label">Scenario 03 · Possible integrative question</div>
+    <div class="scenario-title"><abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr>, <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>, <abbr class="tt" data-tip="Pesticide that blocks Complex I of the electron transport chain, collapsing membrane potential; standard Parkinson&#x27;s model">Rotenone</abbr> and <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr><br>→ ER-Mitochondria Communication Breakdown in Neurodegeneration</div>
+    <div class="priority p-low">🟡 Possible — likely if George wants a cross-lecture integrative question</div>
+
+    <!-- HYPOTHESIS -->
+    <div class="section-block">
+      <div class="section-block-header sh-h">
+        <div class="section-icon si-h">💡</div>
+        <div class="section-title-text st-h">Section 1 — Hypothesis</div>
+      </div>
+      <div class="section-body">
+        <div class="hypothesis-box">
+          <p>We hypothesise that rotenone-induced mitochondrial damage causes the protein <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> to be degraded by the <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> pathway, disrupting the physical contact zones between the ER and mitochondria (called <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>). Loss of <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr> impairs calcium transfer from ER to mitochondria and triggers the Unfolded Protein Response (<abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr>/ER stress), contributing to neuronal dysfunction in Parkinson's and Alzheimer's disease.</p>
+        </div>
+        <p style="font-size:14px;color:var(--muted);font-style:italic;">→ In plain English: The ER and mitochondria in healthy cells are held close together by protein "bridges." <abbr class="tt" data-tip="Pesticide that blocks Complex I of the electron transport chain, collapsing membrane potential; standard Parkinson&#x27;s model">Rotenone</abbr> breaks one of the key bridge proteins (<abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>), the communication between ER and mitochondria fails, and this sets off an ER stress response that damages neurons.</p>
+      </div>
+    </div>
+
+    <!-- RATIONALE -->
+    <div class="section-block">
+      <div class="section-block-header sh-r">
+        <div class="section-icon si-r">📚</div>
+        <div class="section-title-text st-r">Section 2 — Rationale</div>
+      </div>
+      <div class="section-body">
+        <p><span class="key">What are <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>?</span><br>
+        <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr> (Mitochondria-Associated Membranes) are specialised zones where the outer mitochondrial membrane and the ER membrane come extremely close together — only 10 to 30 nanometres apart (roughly 3,000 times thinner than a human hair). They are held at this distance by protein tethers. The most important tethering proteins include <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> (on the mitochondrial outer membrane) and <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> (a multifunctional trafficking protein). <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr> perform critical functions: they transfer calcium from the ER into the mitochondria (which helps drive <abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr> production by the TCA cycle), they are sites of lipid synthesis, and they serve as platforms for mitophagy initiation. In Alzheimer's disease, MAM structure is disrupted early in the disease process.</p>
+
+        <p><span class="key">What happens to <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> in disease?</span><br>
+        <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> (Mitofusin 2) is a GTPase protein (an enzyme that uses GTP as fuel) embedded in the outer mitochondrial membrane. It does two jobs: it drives mitochondrial fusion (merging of mitochondria into networks), and it serves as a structural tether between the ER and mitochondria at <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>. When <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> is activated (which happens when <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapses, as caused by rotenone), one of <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr>'s main targets for ubiquitination and degradation is <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>. So when rotenone damages mitochondria → <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> activates → <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> degrades <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> → MAM contacts are lost. Clue C11 from your friend directly noted "ROT → ↓MFN → MFN deficient = aberrant morphology." Additionally, <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr>, which also stabilises <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>, is disrupted in Alzheimer's disease.</p>
+
+        <p><span class="key">What is ER stress / <abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr>?</span><br>
+        The Endoplasmic Reticulum (ER) is where proteins are folded into their correct shapes. When something goes wrong — such as calcium imbalance (because <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr> are broken and ER can't offload calcium properly) — proteins start misfolding in the ER. The ER activates an emergency response called the Unfolded Protein Response (<abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr>). The <abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr> has three branches activated by sensor proteins: <abbr class="tt" data-tip="PKR-like ER Kinase — one of three ER stress sensors (with IRE1 and ATF6); reduces protein synthesis to relieve ER burden">PERK</abbr>, <abbr class="tt" data-tip="Inositol-Requiring Enzyme 1 — one of three ER stress sensors; splices XBP1 mRNA to activate it as a transcription factor">IRE1</abbr>, and ATF6. One of the first markers of <abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr> activation is upregulation of <abbr class="tt" data-tip="Glucose-Regulated Protein 78 (also called BiP) — ER chaperone upregulated during ER stress; key marker that UPR is active">GRP78</abbr> (also called BiP), an ER chaperone protein. Another key marker is spliced <abbr class="tt" data-tip="X-Box Binding Protein 1 — transcription factor activated by IRE1 during ER stress; its spliced form confirms active UPR">XBP1</abbr> (produced by <abbr class="tt" data-tip="Inositol-Requiring Enzyme 1 — one of three ER stress sensors; splices XBP1 mRNA to activate it as a transcription factor">IRE1</abbr> activity). If ER stress is prolonged and cannot be resolved, the pro-apoptotic protein <abbr class="tt" data-tip="C/EBP Homologous Protein — transcription factor induced by prolonged ER stress; drives cells toward apoptosis">CHOP</abbr> is expressed, which triggers cell death.</p>
+      </div>
+    </div>
+
+    <!-- METHODOLOGY -->
+    <div class="section-block">
+      <div class="section-block-header sh-m">
+        <div class="section-icon si-m">🔬</div>
+        <div class="section-title-text st-m">Section 3 — Methodology</div>
+      </div>
+      <div class="section-body">
+        <p><span class="key">Cell model: <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells + <abbr class="tt" data-tip="Pesticide that blocks Complex I of the electron transport chain, collapsing membrane potential; standard Parkinson&#x27;s model">Rotenone</abbr> (5 µM, 24–48 h).</span></p>
+
+        <ol class="step-list">
+          <li>
+            <div><span class="step-head">Induce mitochondrial stress.</span> Treat <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells with 5 µM rotenone for 24–48 hours. Confirm damage with <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> (<abbr class="tt" data-tip="Fluorescent dye for membrane potential: healthy mitochondria = RED fluorescence; depolarised mitochondria = GREEN">JC-1</abbr> assay), <abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr> quantification (using a luciferase-based luminescence assay, where <abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr> levels are directly proportional to light output), and <abbr class="tt" data-tip="Reactive Oxygen Species — toxic molecules like H₂O₂ produced when mitochondria are damaged">ROS</abbr> measurement (<abbr class="tt" data-tip="Fluorescent dye that specifically detects reactive oxygen species inside mitochondria">MitoSOX</abbr> red dye).</div>
+          </li>
+          <li>
+            <div><span class="step-head">Assess MAM integrity.</span> Use two approaches: (a) Co-immunoprecipitation (<abbr class="tt" data-tip="Co-Immunoprecipitation — detects protein interactions by pulling down one protein with an antibody and checking if another binds to it">co-IP</abbr>) of the IP3R–GRP75–<abbr class="tt" data-tip="Voltage-Dependent Anion Channel — outer membrane channel; part of the MAM calcium transfer complex with IP3R and GRP75">VDAC</abbr> complex — this is the main calcium channel complex that spans both the ER and mitochondrial membranes at <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>; pulling down IP3R and detecting GRP75 and <abbr class="tt" data-tip="Voltage-Dependent Anion Channel — outer membrane channel; part of the MAM calcium transfer complex with IP3R and GRP75">VDAC</abbr> together confirms MAM contacts are intact; if this complex is disrupted in rotenone cells, <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr> are broken. (b) Electron microscopy (EM) — the gold-standard technique for visualising <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>; you can literally see under a very powerful microscope whether the ER membrane is close to mitochondria or has separated.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Measure <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> protein levels and degradation.</span> Western Blot for <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> — expect a decrease in rotenone-treated cells. Confirm that <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> is being ubiquitinated (tagged for degradation) by <abbr class="tt" data-tip="Co-Immunoprecipitation — detects protein interactions by pulling down one protein with an antibody and checking if another binds to it">co-IP</abbr>: pull down <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> with an anti-MFN2 antibody and blot for ubiquitin — a positive result confirms <abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr> is tagging <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> for destruction. Also check <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> localisation by immunofluorescence — in healthy cells <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> is enriched at ER-mitochondria contact sites; in rotenone cells it should be diffuse or absent from these zones.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Measure ER-to-mitochondria calcium transfer.</span> Use a mitochondria-targeted calcium sensor called mtCameleon (a genetically encoded fluorescent sensor that changes its fluorescence ratio when calcium enters the mitochondria). Stimulate the cells with a ligand that causes the ER to release calcium (e.g. <abbr class="tt" data-tip="Adenosine Triphosphate — the cell&#x27;s energy currency, produced in mitochondria">ATP</abbr> or bradykinin, which activate IP3 receptors on the ER). In healthy cells with intact <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>, calcium released from the ER is rapidly taken up by mitochondria (detected as a large spike in mtCameleon signal). In rotenone-treated cells with disrupted <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>, this transfer should be impaired (smaller or slower spike).</div>
+          </li>
+          <li>
+            <div><span class="step-head">Confirm ER stress activation.</span> Western Blot for <abbr class="tt" data-tip="Glucose-Regulated Protein 78 (also called BiP) — ER chaperone upregulated during ER stress; key marker that UPR is active">GRP78</abbr> (elevated = ER stress is active), phospho-PERK (the <abbr class="tt" data-tip="PKR-like ER Kinase — one of three ER stress sensors (with IRE1 and ATF6); reduces protein synthesis to relieve ER burden">PERK</abbr> branch of the <abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr> is switched on), and <abbr class="tt" data-tip="C/EBP Homologous Protein — transcription factor induced by prolonged ER stress; drives cells toward apoptosis">CHOP</abbr> (elevated = the cell is heading toward apoptosis). Detect <abbr class="tt" data-tip="X-Box Binding Protein 1 — transcription factor activated by IRE1 during ER stress; its spliced form confirms active UPR">XBP1</abbr> splicing by RT-PCR — the spliced form of <abbr class="tt" data-tip="X-Box Binding Protein 1 — transcription factor activated by IRE1 during ER stress; its spliced form confirms active UPR">XBP1</abbr> mRNA (produced by the <abbr class="tt" data-tip="Inositol-Requiring Enzyme 1 — one of three ER stress sensors; splices XBP1 mRNA to activate it as a transcription factor">IRE1</abbr> branch of the <abbr class="tt" data-tip="Unfolded Protein Response — the ER&#x27;s emergency response to misfolded proteins; three branches: PERK, IRE1, ATF6">UPR</abbr>) is larger and runs at a different size on a gel, distinguishing it from the unspliced form.</div>
+          </li>
+          <li>
+            <div><span class="step-head">Rescue: overexpress <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> or <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr>.</span> Transfect cells with a plasmid containing <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> or <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> coding sequence. If restoring these proteins rescues MAM contacts (confirmed by <abbr class="tt" data-tip="Co-Immunoprecipitation — detects protein interactions by pulling down one protein with an antibody and checking if another binds to it">co-IP</abbr> and EM), restores calcium transfer (mtCameleon), and reduces ER stress markers (<abbr class="tt" data-tip="Glucose-Regulated Protein 78 (also called BiP) — ER chaperone upregulated during ER stress; key marker that UPR is active">GRP78</abbr>, <abbr class="tt" data-tip="C/EBP Homologous Protein — transcription factor induced by prolonged ER stress; drives cells toward apoptosis">CHOP</abbr> down) and cell death (Annexin V down), this proves <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>/<abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> loss was causal — not a side effect.</div>
+          </li>
+        </ol>
+
+        <div class="controls-grid">
+          <div class="control-card"><div class="control-type">Negative control</div><div class="control-desc">DMSO-treated <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> (no rotenone) — baseline healthy cells</div></div>
+          <div class="control-card"><div class="control-type">ER stress positive control</div><div class="control-desc">Tunicamycin treatment — a drug that blocks N-linked glycosylation and causes strong ER stress; confirms <abbr class="tt" data-tip="Glucose-Regulated Protein 78 (also called BiP) — ER chaperone upregulated during ER stress; key marker that UPR is active">GRP78</abbr>/<abbr class="tt" data-tip="X-Box Binding Protein 1 — transcription factor activated by IRE1 during ER stress; its spliced form confirms active UPR">XBP1</abbr> antibodies and assays are working</div></div>
+          <div class="control-card"><div class="control-type"><abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> scramble control</div><div class="control-desc">Scramble <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> alongside any <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> or <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> <abbr class="tt" data-tip="Small Interfering RNA — a tool to specifically switch off expression of one target gene in a cell">siRNA</abbr> knockdown experiments</div></div>
+          <div class="control-card"><div class="control-type">Rescue vector control</div><div class="control-desc">Empty plasmid alongside <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>/<abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> overexpression, to rule out vector effects</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPECTED RESULTS -->
+    <div class="section-block">
+      <div class="section-block-header sh-a">
+        <div class="section-icon si-a">📊</div>
+        <div class="section-title-text st-a">Section 4 — Analysis &amp; Expected Results</div>
+      </div>
+      <div class="section-body">
+        <ul class="result-list">
+          <li>Rotenone-treated cells show <strong>decreased <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> protein levels</strong> (<abbr class="tt" data-tip="Western Blot — proteins are separated by size on a gel and detected with specific antibodies to measure their amount">WB</abbr>) and increased <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> ubiquitination (<abbr class="tt" data-tip="Co-Immunoprecipitation — detects protein interactions by pulling down one protein with an antibody and checking if another binds to it">co-IP</abbr>), confirming Parkin-mediated degradation</li>
+          <li><abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> is <strong>absent from ER-mitochondria contact zones</strong> in rotenone-treated cells by immunofluorescence</li>
+          <li><abbr class="tt" data-tip="Co-Immunoprecipitation — detects protein interactions by pulling down one protein with an antibody and checking if another binds to it">co-IP</abbr> of IP3R–GRP75–<abbr class="tt" data-tip="Voltage-Dependent Anion Channel — outer membrane channel; part of the MAM calcium transfer complex with IP3R and GRP75">VDAC</abbr> complex <strong>is disrupted</strong> in rotenone cells; electron microscopy shows ER and mitochondrial membranes are <strong>further apart</strong> than in control cells</li>
+          <li>mtCameleon calcium uptake signal is <strong>significantly reduced</strong> after ER calcium release stimulus, confirming MAM-dependent calcium transfer is impaired</li>
+          <li><abbr class="tt" data-tip="Glucose-Regulated Protein 78 (also called BiP) — ER chaperone upregulated during ER stress; key marker that UPR is active">GRP78</abbr> protein is <strong>elevated</strong>, spliced <abbr class="tt" data-tip="X-Box Binding Protein 1 — transcription factor activated by IRE1 during ER stress; its spliced form confirms active UPR">XBP1</abbr> is <strong>detected</strong>, and <abbr class="tt" data-tip="C/EBP Homologous Protein — transcription factor induced by prolonged ER stress; drives cells toward apoptosis">CHOP</abbr> is <strong>upregulated</strong> — all markers of active and potentially harmful ER stress</li>
+          <li><abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr> or <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> overexpression <strong>restores MAM contacts</strong>, normalises calcium transfer, and reduces <abbr class="tt" data-tip="Glucose-Regulated Protein 78 (also called BiP) — ER chaperone upregulated during ER stress; key marker that UPR is active">GRP78</abbr>, <abbr class="tt" data-tip="X-Box Binding Protein 1 — transcription factor activated by IRE1 during ER stress; its spliced form confirms active UPR">XBP1</abbr>, <abbr class="tt" data-tip="C/EBP Homologous Protein — transcription factor induced by prolonged ER stress; drives cells toward apoptosis">CHOP</abbr>, and cell death markers</li>
+        </ul>
+        <p style="margin-top:14px;"><span class="key">Conclusion:</span> Rotenone-induced <abbr class="tt" data-tip="Mitochondrial Membrane Potential — electrical charge across the inner mitochondrial membrane; essential for ATP production">ΔΨm</abbr> collapse activates <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr>, which degrades <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>, dismantling <abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr> and severing ER-mitochondria communication. This impairs calcium transfer and triggers ER stress, amplifying neuronal death. This mechanism is relevant to both Parkinson's and Alzheimer's disease, where MAM dysfunction has been documented early in disease progression.</p>
+      </div>
+    </div>
+
+    <div class="exam-note">
+      <p>⚡ <strong>Exam tip:</strong> Clue C11 directly mentions <em>"<abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr> controls ER-MT communication … <abbr class="tt" data-tip="Human neuroblastoma cell line used as a lab model of neurons in neurodegeneration research">SH-SY5Y</abbr> cells + rotenone = PARKIN + <abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr> induction … ROT → ↓MFN → aberrant morphology … ER stress + mitophagy."</em> This scenario is the integrative "all the lectures together" question — pull from Lectures 10 (<abbr class="tt" data-tip="PTEN-Induced Kinase 1 — mitochondrial damage sensor; accumulates on the outer membrane when membrane potential collapses">PINK1</abbr>/<abbr class="tt" data-tip="E3 ubiquitin ligase recruited by PINK1 to tag damaged mitochondria with ubiquitin for disposal via mitophagy">Parkin</abbr>), 12 (<abbr class="tt" data-tip="Mitochondria-Associated Membranes — contact zones 10-30 nm wide where ER and mitochondria communicate and transfer calcium">MAMs</abbr>), and 8 (ER stress). If the exam says "using the keywords <abbr class="tt" data-tip="Phosphofurin Acidic Cluster Sorting Protein 2 — stabilises contact zones (MAMs) between the ER and mitochondria">PACS2</abbr>, <abbr class="tt" data-tip="Mitofusin 2 — outer mitochondrial membrane protein that drives mitochondrial fusion AND anchors MAM contacts with the ER">MFN2</abbr>, and ER stress" — this is your answer.</p>
+    </div>
+  </section>
+
+</div>
+
+<div id="tt-popup"></div>
+
+<script>
+  const popup = document.getElementById('tt-popup');
+  let activeEl = null;
+
+  document.querySelectorAll('abbr.tt').forEach(el => {
+    el.addEventListener('click', function(e) {
+      e.stopPropagation();
+
+      // If clicking the already-open one, close it
+      if (activeEl === this && popup.classList.contains('visible')) {
+        close();
+        return;
+      }
+
+      activeEl = this;
+      popup.textContent = this.dataset.tip;
+      popup.classList.add('visible');
+      positionNear(this);
+    });
+  });
+
+  // Click anywhere else closes the popup
+  document.addEventListener('click', function() {
+    close();
+  });
+
+  // Close on scroll so it doesn't float away from its word
+  window.addEventListener('scroll', close, { passive: true });
+
+  function close() {
+    popup.classList.remove('visible');
+    activeEl = null;
+  }
+
+  function positionNear(el) {
+    const GAP = 10;
+    const rect = el.getBoundingClientRect();
+    const W = popup.offsetWidth;
+    const H = popup.offsetHeight;
+    const vw = window.innerWidth;
+
+    // Centre above the word
+    let left = rect.left + rect.width / 2 - W / 2;
+    let top  = rect.top - H - GAP;
+
+    // If it goes above viewport, flip below the word
+    if (top < 8) {
+      top = rect.bottom + GAP;
+    }
+
+    // Clamp horizontally
+    left = Math.max(8, Math.min(left, vw - W - 8));
+
+    popup.style.left = left + 'px';
+    popup.style.top  = top  + 'px';
+  }
+</script>
+</body>
+</html>
