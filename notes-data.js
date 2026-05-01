@@ -3482,4 +3482,5 @@ For the final exam, focus on understanding cardiolipin as the unique dimeric pho
 Good luck on your final exam! 🧠✨🎓`,
 
 };
+
 window.lectureNotes = lectureNotes;
