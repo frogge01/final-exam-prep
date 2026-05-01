@@ -16,7 +16,7 @@ const lectureNotesContent = {
 };
 
 // Lecture notes content - Book-style readable notes
-const lectureNotes = {
+window.lectureNotes = {
   2: `Lecture 2: Lipid Rafts
 
 Complete Exam Study Notes - Readable Book-Style Version
