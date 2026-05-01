@@ -1,6 +1,7 @@
 // Global destructuring — compatible with browser Babel (no module imports)
 const { useMemo, useState } = React;
 const { Menu, X, BookOpen, Layers, ClipboardList, ChevronDown, ArrowLeft, ArrowRight, CheckSquare, Square, BarChart3 } = lucide;
+const lectureNotes = window.lectureNotes;
 
 // FileText icon as inline component (not available in CDN lucide global)
 const FileText = ({ className }) =>
